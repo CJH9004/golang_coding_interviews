@@ -8,25 +8,6 @@
  */
 package main
 
-// Node is node for List
-type Node struct {
-	val  int
-	next *Node
-}
-
-func createList(data []int) (head *Node) {
-	if len(data) == 0 {
-		return nil
-	}
-	head = &Node{data[0], nil}
-	tail := head
-	for _, v := range data[1:] {
-		tail.next = &Node{v, nil}
-		tail = tail.next
-	}
-	return
-}
-
 // ReversePrintList receive a string and replace it's space by %20
 func ReversePrintList(head *Node) (data []int) {
 	// for cur := head; cur != nil; cur = cur.next {
